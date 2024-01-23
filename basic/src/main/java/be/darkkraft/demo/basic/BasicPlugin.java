@@ -1,6 +1,6 @@
-package be.darkkraft.demoplugin;
+package be.darkkraft.demo.basic;
 
-import be.darkkraft.demoplugin.login.MyCustomReadyListener;
+import be.darkkraft.demo.basic.listener.MyCustomReadyListener;
 import be.darkkraft.transferproxy.api.event.EventType;
 import be.darkkraft.transferproxy.api.plugin.Plugin;
 import org.slf4j.Logger;
@@ -9,9 +9,9 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 
-public final class DemoPlugin implements Plugin {
+public final class BasicPlugin implements Plugin {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(DemoPlugin.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(BasicPlugin.class);
 
     private ScheduledExecutorService executor;
 
@@ -19,13 +19,13 @@ public final class DemoPlugin implements Plugin {
     public void onEnable() {
         this.executor = Executors.newSingleThreadScheduledExecutor();
         this.getProxy().getModuleManager().setListener(EventType.READY, new MyCustomReadyListener(this.executor));
-        LOGGER.info("DemoPlugin is now enabled and LoginHandler are correctly redefined!");
+        LOGGER.info("BasicPlugin is now enabled and LoginHandler are correctly redefined!");
     }
 
     @Override
     public void onDisable() {
         this.executor.shutdownNow().forEach(Runnable::run);
-        LOGGER.info("DemoPlugin is now disabled!");
+        LOGGER.info("BasicPlugin is now disabled!");
     }
 
 }

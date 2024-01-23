@@ -1,0 +1,5 @@
+name: BasicPlugin
+author: Darkkraft
+version: 1.0
+description: This is a demo plugin.
+main: be.darkkraft.demo.basic.BasicPlugin

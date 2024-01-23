@@ -1,15 +1,39 @@
-plugins {
-    id 'java'
-}
-
 group = 'be.darkkraft.transferproxy'
-version = '1.0'
+version = '1.0.1'
 
-repositories {
-    mavenCentral()
-    maven { url 'https://jitpack.io' }
+buildscript {
+    repositories {
+        mavenCentral()
+    }
 }
 
-dependencies {
-    compileOnly 'com.github.Darkkraft.TransferProxy:api:1.0.1'
+allprojects {
+    apply plugin: 'java'
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+        compileOnly 'com.github.Darkkraft.TransferProxy:api:1.0.1'
+    }
+
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(17))
+        }
+    }
+}
+
+task buildAllJars(type: Copy) {
+    into "$buildDir/libs"
+
+    subprojects {
+        afterEvaluate { project ->
+            if (project.plugins.hasPlugin('java')) {
+                from project.tasks.named('jar')
+            }
+        }
+    }
 }

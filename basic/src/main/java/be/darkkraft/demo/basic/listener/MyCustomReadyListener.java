@@ -1,4 +1,4 @@
-package be.darkkraft.demoplugin.login;
+package be.darkkraft.demo.basic.listener;
 
 import be.darkkraft.transferproxy.api.event.listener.ReadyListener;
 import be.darkkraft.transferproxy.api.network.connection.PlayerConnection;

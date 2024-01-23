@@ -1,0 +1,5 @@
+name: OneServerPlugin
+author: Darkkraft
+version: 1.0
+description: All players are sent to the same server.
+main: be.darkkraft.demo.oneserver.OneServerPlugin
