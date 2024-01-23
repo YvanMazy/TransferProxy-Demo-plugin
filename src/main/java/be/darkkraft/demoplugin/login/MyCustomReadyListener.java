@@ -1,6 +1,6 @@
 package be.darkkraft.demoplugin.login;
 
-import be.darkkraft.transferproxy.api.login.LoginHandler;
+import be.darkkraft.transferproxy.api.event.listener.ReadyListener;
 import be.darkkraft.transferproxy.api.network.connection.PlayerConnection;
 import be.darkkraft.transferproxy.api.profile.ClientInformation;
 import be.darkkraft.transferproxy.api.profile.MainHand;
@@ -10,13 +10,13 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-public class MyCustomLoginHandler implements LoginHandler {
+public class MyCustomReadyListener implements ReadyListener {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(MyCustomLoginHandler.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MyCustomReadyListener.class);
 
     private final ScheduledExecutorService executor;
 
-    public MyCustomLoginHandler(final ScheduledExecutorService executor) {
+    public MyCustomReadyListener(final ScheduledExecutorService executor) {
         this.executor = executor;
     }
 

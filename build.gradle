@@ -11,5 +11,5 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'com.github.Darkkraft.TransferProxy:api:1.0.0'
+    compileOnly 'com.github.Darkkraft.TransferProxy:api:1.0.1'
 }

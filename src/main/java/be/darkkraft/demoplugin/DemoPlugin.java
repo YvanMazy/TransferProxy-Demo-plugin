@@ -1,6 +1,7 @@
 package be.darkkraft.demoplugin;
 
-import be.darkkraft.demoplugin.login.MyCustomLoginHandler;
+import be.darkkraft.demoplugin.login.MyCustomReadyListener;
+import be.darkkraft.transferproxy.api.event.EventType;
 import be.darkkraft.transferproxy.api.plugin.Plugin;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +18,7 @@ public final class DemoPlugin implements Plugin {
     @Override
     public void onEnable() {
         this.executor = Executors.newSingleThreadScheduledExecutor();
-        this.getProxy().getModuleManager().setLoginHandler(new MyCustomLoginHandler(this.executor));
+        this.getProxy().getModuleManager().setListener(EventType.READY, new MyCustomReadyListener(this.executor));
         LOGGER.info("DemoPlugin is now enabled and LoginHandler are correctly redefined!");
     }
 
