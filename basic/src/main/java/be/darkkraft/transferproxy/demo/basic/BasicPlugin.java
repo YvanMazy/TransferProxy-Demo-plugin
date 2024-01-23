@@ -1,6 +1,6 @@
-package be.darkkraft.demo.basic;
+package be.darkkraft.transferproxy.demo.basic;
 
-import be.darkkraft.demo.basic.listener.MyCustomReadyListener;
+import be.darkkraft.transferproxy.demo.basic.listener.MyCustomReadyListener;
 import be.darkkraft.transferproxy.api.event.EventType;
 import be.darkkraft.transferproxy.api.plugin.Plugin;
 import org.slf4j.Logger;

@@ -1,4 +1,4 @@
-package be.darkkraft.demo.basic.listener;
+package be.darkkraft.transferproxy.demo.basic.listener;
 
 import be.darkkraft.transferproxy.api.event.listener.ReadyListener;
 import be.darkkraft.transferproxy.api.network.connection.PlayerConnection;
