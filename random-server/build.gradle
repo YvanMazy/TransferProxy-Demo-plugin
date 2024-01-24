@@ -1,0 +1,6 @@
+group = 'be.darkkraft.transferproxy'
+version = '1.0'
+
+jar {
+    archiveBaseName = "RandomServerPlugin"
+}

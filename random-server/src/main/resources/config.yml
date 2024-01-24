@@ -1,0 +1,4 @@
+# Server address format: IP:PORT
+servers:
+  - "localhost:35565"
+  - "localhost:45565"
