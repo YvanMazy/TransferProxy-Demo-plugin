@@ -32,7 +32,11 @@ task buildAllJars(type: Copy) {
     subprojects {
         afterEvaluate { project ->
             if (project.plugins.hasPlugin('java')) {
-                from project.tasks.named('jar')
+                if (project.plugins.hasPlugin('com.github.johnrengelman.shadow')) {
+                    from project.tasks.named('shadowJar')
+                } else {
+                    from project.tasks.named('jar')
+                }
             }
         }
     }

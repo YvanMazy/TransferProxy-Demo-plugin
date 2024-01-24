@@ -1,4 +1,4 @@
 rootProject.name = 'TransferProxy-DemoPlugin'
 include 'basic'
 include 'one-server'
-
+include 'jwt-example'

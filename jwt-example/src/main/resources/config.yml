@@ -1,0 +1,4 @@
+jwt-token: "my-super-secret"
+hash-password: "hash-password"
+server-address: "localhost"
+server-port: 35565
