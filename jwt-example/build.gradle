@@ -2,9 +2,6 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
-group = 'be.darkkraft.transferproxy'
-version = '1.0'
-
 dependencies {
     implementation 'com.auth0:java-jwt:4.2.1'
 }

@@ -10,6 +10,9 @@ buildscript {
 allprojects {
     apply plugin: 'java'
 
+    group = 'be.darkkraft.transferproxy'
+    version = '1.0'
+
     repositories {
         mavenCentral()
         maven { url 'https://jitpack.io' }
