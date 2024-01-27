@@ -18,7 +18,7 @@ public final class BasicPlugin implements Plugin {
     @Override
     public void onEnable() {
         this.executor = Executors.newSingleThreadScheduledExecutor();
-        this.getProxy().getModuleManager().setListener(EventType.READY, new MyCustomReadyListener(this.executor));
+        this.getModuleManager().setListener(EventType.READY, new MyCustomReadyListener(this.executor));
         LOGGER.info("BasicPlugin is now enabled and LoginHandler are correctly redefined!");
     }
 

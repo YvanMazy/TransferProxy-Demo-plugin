@@ -20,8 +20,8 @@ public final class JWTPlugin implements Plugin {
         config.checkDefaultValues();
 
         final JWTWrapper wrapper = new JWTWrapper(config.getJwtToken());
-        this.getProxy().getModuleManager().<PreLoginListener>setListener(EventType.PRE_LOGIN, new LoginListener(config, wrapper));
-        this.getProxy().getModuleManager().<ReadyListener>setListener(EventType.READY, new TransferListener(config, wrapper));
+        this.getModuleManager().<PreLoginListener>setListener(EventType.PRE_LOGIN, new LoginListener(config, wrapper));
+        this.getModuleManager().<ReadyListener>setListener(EventType.READY, new TransferListener(config, wrapper));
     }
 
 }

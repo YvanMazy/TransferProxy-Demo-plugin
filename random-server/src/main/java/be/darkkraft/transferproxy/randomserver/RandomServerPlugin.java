@@ -26,7 +26,7 @@ public final class RandomServerPlugin implements Plugin {
                 .toArray(Server[]::new);
 
         LOGGER.info("Servers found: {}", servers.length);
-        this.getProxy().getModuleManager().setListener(EventType.READY, new RandomReadyListener(servers));
+        this.getModuleManager().setListener(EventType.READY, new RandomReadyListener(servers));
     }
 
     private static int parseInt(final @NotNull String string) {
