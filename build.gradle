@@ -11,7 +11,7 @@ allprojects {
     apply plugin: 'java'
 
     group = 'be.darkkraft.transferproxy'
-    version = '1.0'
+    version = '1.1.0'
 
     repositories {
         mavenCentral()
@@ -25,6 +25,15 @@ allprojects {
     java {
         toolchain {
             languageVersion.set(JavaLanguageVersion.of(17))
+        }
+    }
+
+    processResources {
+        def props = [version: version]
+        inputs.properties props
+        filteringCharset 'UTF-8'
+        filesMatching('plugin.yml') {
+            expand props
         }
     }
 }
