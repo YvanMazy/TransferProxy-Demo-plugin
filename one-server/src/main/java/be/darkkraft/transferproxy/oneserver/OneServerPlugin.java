@@ -19,7 +19,7 @@ public final class OneServerPlugin implements Plugin {
         final int port = config.getServerPort();
 
         LOGGER.info("Players will be transferred to {}:{}", address, port);
-        this.getModuleManager().<ReadyListener>setListener(EventType.READY, connection -> connection.transfer(address, port));
+        this.getEventManager().<ReadyListener>addListener(EventType.READY, connection -> connection.transfer(address, port));
     }
 
 }

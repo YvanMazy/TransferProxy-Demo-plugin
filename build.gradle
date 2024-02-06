@@ -1,5 +1,5 @@
 group = 'be.darkkraft.transferproxy'
-version = '1.0.2'
+version = '1.0.3'
 
 buildscript {
     repositories {
@@ -19,7 +19,7 @@ allprojects {
     }
 
     dependencies {
-        compileOnly 'com.github.Darkkraft.TransferProxy:api:1.0.2'
+        compileOnly 'com.github.Darkkraft.TransferProxy:api:1.0.3'
     }
 
     java {
