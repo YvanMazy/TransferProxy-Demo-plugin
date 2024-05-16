@@ -1,5 +1,5 @@
 name: JWT-Example
-author: Darkkraft
+author: YvanMazy
 version: ${version}
 description: An example plugin for authentication with JWT and SHA-256.
-main: be.darkkraft.transferproxy.jwtexample.JWTPlugin
+main: net.transferproxy.jwtexample.JWTPlugin

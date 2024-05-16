@@ -1,5 +1,5 @@
 name: BasicPlugin
-author: Darkkraft
+author: YvanMazy
 version: ${version}
 description: This is a demo plugin.
-main: be.darkkraft.transferproxy.demo.basic.BasicPlugin
+main: net.transferproxy.demo.basic.BasicPlugin

@@ -1,5 +1,5 @@
 name: OneServerPlugin
-author: Darkkraft
+author: YvanMazy
 version: ${version}
 description: All players are sent to the same server.
-main: be.darkkraft.transferproxy.oneserver.OneServerPlugin
+main: net.transferproxy.oneserver.OneServerPlugin

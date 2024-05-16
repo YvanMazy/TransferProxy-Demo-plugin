@@ -1,5 +1,5 @@
 name: RandomServerPlugin
-author: Darkkraft
+author: YvanMazy
 version: ${version}
 description: All players are sent to a random server.
-main: be.darkkraft.transferproxy.randomserver.RandomServerPlugin
+main: net.transferproxy.randomserver.RandomServerPlugin

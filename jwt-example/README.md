@@ -6,6 +6,6 @@ This plugin blocks connections that come from a transfer and which do not come f
 
 The JWT token and hash password are configurable in the `config.yml`
 
-If you want to use this plugin as a base and then modify the transfer rules, you can simply modify [this method](https://github.com/Darkkraft/TransferProxy-Demo-plugin/blob/master/jwt-example/src/main/java/be/darkkraft/transferproxy/jwtexample/listener/TransferListener.java#L36).
+If you want to use this plugin as a base and then modify the transfer rules, you can simply modify [this method](https://github.com/YvanMazy/TransferProxy-Demo-plugin/blob/master/jwt-example/src/main/java/net/transferproxy/jwtexample/listener/TransferListener.java#L36).
 
 **⚠️ This plugin is just an example, it is not a plugin to be used in production. A system of this type must be used to use the client connection to pass information between servers in an encrypted manner. But it in no way prevents servers from connecting without going through your proxy because it is possible for a modified client to copy the cookie and reuse it.**
