@@ -39,7 +39,7 @@ allprojects {
 }
 
 task buildAllJars(type: Copy) {
-    into "$buildDir/libs"
+    into layout.buildDirectory.dir("libs")
 
     subprojects {
         afterEvaluate { project ->
