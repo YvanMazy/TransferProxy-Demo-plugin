@@ -19,7 +19,7 @@ allprojects {
     }
 
     dependencies {
-        compileOnly 'com.github.YvanMazy.TransferProxy:api:1.0.6'
+        compileOnly 'com.github.YvanMazy.TransferProxy:api:1.1.0'
     }
 
     java {
